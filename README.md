@@ -50,35 +50,35 @@ funzionale (efficacia) per permettere di eseguire operazioni limitando il numero
 
 MAIL SERVER:
 
-    Il mail server gestisce una lista di caselle di posta elettronica e ne mantiene la persistenza utilizzando file (txt o binari, JSON se sapete come gestirli, a vostra scelta - non si possono usare database) per memorizzare i messaggi in modo permanente.
+Il mail server gestisce una lista di caselle di posta elettronica e ne mantiene la persistenza utilizzando file (txt o binari, JSON se sapete come gestirli, a vostra scelta - non si possono usare database) per memorizzare i messaggi in modo permanente.
 
-    Ogni casella di posta elettronica contiene:
-        Nome dell’account di mail associato alla casella postale (es., giorgio@mia.mail.com).
-        Lista (eventualmente vuota) di messaggi. I messaggi di posta elettronica sono istanze di una classe Email che specifica ID, mittente, destinatario/i, argomento, testo e data di spedizione del messaggio.
+Ogni casella di posta elettronica contiene:
+Nome dell’account di mail associato alla casella postale (es., giorgio@mia.mail.com).
+Lista (eventualmente vuota) di messaggi. I messaggi di posta elettronica sono istanze di una classe Email che specifica ID, mittente, destinatario/i, argomento, testo e data di spedizione del messaggio.
 
-    Il mail server ha un’interfaccia grafica sulla quale viene visualizzato il log degli eventi che occorrono durante l’interazione tra i client e il server.
-        Per esempio: apertura/chiusura di una connessione tra mail client e server, invio di messaggi da parte di un client a uno o più destinatari, errori nella consegna di messaggi ai destinatari.
-        NB: NON fare log di eventi locali al client come il fatto che l'utente ha schiacciato un bottone, aperto una finestra o simili in quanto non sono di pertinenza del server.
-    NB: si assuma che il server abbia un numero fisso di account di posta elettronica, precompilato (per es. 3 account). Non si richiede che da mail client si possano registrare nuovi account di posta sul server.
+Il mail server ha un’interfaccia grafica sulla quale viene visualizzato il log degli eventi che occorrono durante l’interazione tra i client e il server.
+Per esempio: apertura/chiusura di una connessione tra mail client e server, invio di messaggi da parte di un client a uno o più destinatari, errori nella consegna di messaggi ai destinatari.
+NB: NON fare log di eventi locali al client come il fatto che l'utente ha schiacciato un bottone, aperto una finestra o simili in quanto non sono di pertinenza del server.
+NB: si assuma che il server abbia un numero fisso di account di posta elettronica, precompilato (per es. 3 account). Non si richiede che da mail client si possano registrare nuovi account di posta sul server.
 
 COMUNICAZIONE TRA CLIENT E SERVER:
 
-    La verifica dell'esistenza degli indirizzi di posta elettronica è responsabilità del server. In caso l'utente inserisca indirizzi di posta elettronica non esistenti, il server deve inviare messaggio di errore al client. Per esempio, in merito al fallimento di un'autenticazione, oppure in caso l'utente tenti di inviare un messaggio a un account inesistente.
+La verifica dell'esistenza degli indirizzi di posta elettronica è responsabilità del server. In caso l'utente inserisca indirizzi di posta elettronica non esistenti, il server deve inviare messaggio di errore al client. Per esempio, in merito al fallimento di un'autenticazione, oppure in caso l'utente tenti di inviare un messaggio a un account inesistente.
 
-    Il mail client non deve andare in crash se il mail server viene spento. Gestire i problemi di connessione al mail server inviando opportuni messaggi di errore all’utente e fare in modo che il mail client si riconnetta automaticamente al server quando questo è novamente attivo.
+Il mail client non deve andare in crash se il mail server viene spento. Gestire i problemi di connessione al mail server inviando opportuni messaggi di errore all’utente e fare in modo che il mail client si riconnetta automaticamente al server quando questo è novamente attivo.
 
 ULTERIORI REQUISITI (MAIL CLIENT E MAIL SERVER)
 
-    Non gestite socket permanenti per collegare client e server: fate in modo che, come HTTP, il client chieda di aprire la connessione ogni volta che ha bisogno di fare un'operazione.
-    Non trasferite intere caselle di posta elettronica da client a server, o viceversa, per questioni di scalabilità del servizio. Quando il client chiede aggiornamenti al server, il server deve solo inviare i messaggi che non sono stati precedentemente distribuiti al client.
+Non gestite socket permanenti per collegare client e server: fate in modo che, come HTTP, il client chieda di aprire la connessione ogni volta che ha bisogno di fare un'operazione.
+Non trasferite intere caselle di posta elettronica da client a server, o viceversa, per questioni di scalabilità del servizio. Quando il client chiede aggiornamenti al server, il server deve solo inviare i messaggi che non sono stati precedentemente distribuiti al client.
 
 PROMEMORIA PER L'ESAME
 
-    Il progetto SW può essere svolto in gruppo (max 3 persone) o individualmente. Se lo si svolge in gruppo la discussione deve essere fatta dall’intero gruppo in soluzione unica.
-    La discussione potrà essere fatta nelle date di appello orale dell’insegnamento (appelli su Esse3 nominati "Discussione di laboratorio").
-    Si può discutere il progetto SW prima o dopo aver sostenuto la prova scritta, a propria scelta.
-    Come da regolamento d’esame il voto finale si ottiene come media del voto della prova teorica (scritta) e della discussione di laboratorio (i due voti hanno ugual peso nella media).
-    Il voto finale deve essere registrato entro fine settembre 2025, data oltre la quale non è possibile mantenere i voti parziali. Leggere il regolamento d’esame sulla pagina web dell’insegnamento per ulteriori dettagli.
+Il progetto SW può essere svolto in gruppo (max 3 persone) o individualmente. Se lo si svolge in gruppo la discussione deve essere fatta dall’intero gruppo in soluzione unica.
+La discussione potrà essere fatta nelle date di appello orale dell’insegnamento (appelli su Esse3 nominati "Discussione di laboratorio").
+Si può discutere il progetto SW prima o dopo aver sostenuto la prova scritta, a propria scelta.
+Come da regolamento d’esame il voto finale si ottiene come media del voto della prova teorica (scritta) e della discussione di laboratorio (i due voti hanno ugual peso nella media).
+Il voto finale deve essere registrato entro fine settembre 2025, data oltre la quale non è possibile mantenere i voti parziali. Leggere il regolamento d’esame sulla pagina web dell’insegnamento per ulteriori dettagli.
 
 Il progetto di laboratorio consiste in due applicazioni (progetti IntelliJ IDEA separati):
 
