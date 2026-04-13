@@ -1,0 +1,39 @@
+[
+  {
+    "name": "alpha@gmail.com",
+    "emails": [
+      {
+        "id": "09b1ea22-4597-407b-877b-0cb35b76335f",
+        "from": "max@gmail.com",
+        "to": [
+          "alpha@gmail.com"
+        ],
+        "subject": "Re: Comunicazione",
+        "body": "Risposta alla comunicazione",
+        "date": "25/03/2026 17:15:17"
+      },
+      {
+        "id": "8b9d6347-cc49-4299-b618-1088d995465b",
+        "from": "max@gmail.com",
+        "to": [
+          "alpha@gmail.com",
+          "beta@gmail.com"
+        ],
+        "subject": "ciao",
+        "body": "messaggio 2 destinatari",
+        "date": "26/03/2026 08:04:45"
+      },
+      {
+        "id": "d4430b45-6a81-4329-9912-ae5ec68593e1",
+        "from": "beta@gmail.com",
+        "to": [
+          "max@gmail.com",
+          "alpha@gmail.com"
+        ],
+        "subject": "Re: ciao",
+        "body": "risposta",
+        "date": "26/03/2026 08:05:01"
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "beta@gmail.com",
+    "emails": [
+      {
+        "id": "3eae9c6e-c5d3-4d5d-968c-50bfca512f72",
+        "from": "max@gmail.com",
+        "to": [
+          "beta@gmail.com"
+        ],
+        "subject": "Ciao",
+        "body": "Come va?",
+        "date": "25/03/2026 17:14:13"
+      },
+      {
+        "id": "55fa5549-07f8-4682-b17c-a2bd4e1ade8c",
+        "from": "alpha@gmail.com",
+        "to": [
+          "max@gmail.com",
+          "beta@gmail.com"
+        ],
+        "subject": "Comunicazione",
+        "body": "Questa e\u0027 una comunicazione",
+        "date": "25/03/2026 17:14:53"
+      }
+    ]
+  }
+]
